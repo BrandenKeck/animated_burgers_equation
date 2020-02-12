@@ -4,6 +4,6 @@ Check out the full walkthrough on the [Lorena Barba group website](https://loren
 
 # External Links to GIFs
 
-[1D Burger's Equation](http://http://brandenkeck.com/res/img/screenshot/burgers_equation_1d.gif)
+![1D Burger's Equation](http://brandenkeck.com/res/img/screenshot/burgers_equation_1d.gif)
 
-[2D Burger's Equation](http://http://brandenkeck.com/res/img/screenshot/burgers_equation_2d.gif)
+![2D Burger's Equation](http://brandenkeck.com/res/img/screenshot/burgers_equation_2d.gif)
