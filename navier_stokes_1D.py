@@ -195,6 +195,11 @@ if __name__ == "__main__":
 	line, = ax.plot([], [], 'r-')
 	
 	anim = animation.FuncAnimation(fig, animate_1D, fargs=(onett, ness), frames=len(ness), interval=Interval, blit=True)
+
+	plt.rcParams['animation.ffmpeg_path'] = './ffmpeg'
+	mywriter = animation.FFMpegWriter(fps=60)
+	anim.save('burgers_equation_1D.mp4',writer=mywriter)
+
 	plt.show()
 	
 	################################################################################################################
