@@ -202,7 +202,8 @@ Zx = np.array(velocity_function0(X,Y))
 Zy = np.array(velocity_function1(X,Y))
 
 fig = plt.figure(figsize=(11, 7), dpi=100)
-ax = fig.add_subplot(111, projection='3d')  
+ax = fig.add_subplot(111, projection='3d')
+ax.set_zlim3d(1, 2.2)
 ax.set_xlabel('$x$')
 ax.set_ylabel('$y$')       
 xx, yy = np.meshgrid(X, Y)
@@ -222,8 +223,10 @@ def animate_2D(i):
 	surf = ax.plot_surface(xx, yy, ness[i], cmap=cm.viridis, rstride=2, cstride=2)
 
 anim = animation.FuncAnimation(fig, animate_2D, frames=ness.shape[0], interval=Interval)
+
+plt.rcParams['animation.ffmpeg_path'] = './ffmpeg'
 mywriter = animation.FFMpegWriter(fps=60)
-anim.save('./Navier-Stokes-2D.mp4',writer=mywriter)
-ax.set_zlim3d(1, 2.2)
+anim.save('burgers_equation.mp4',writer=mywriter)
+
 plt.show()
 	
